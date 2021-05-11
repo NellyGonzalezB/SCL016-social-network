@@ -1,3 +1,6 @@
+/*@media screen and (min-width:375px) and (max-width:667px){*/
+
+
 .logo-container {
     text-align: center;
 }
@@ -101,3 +104,4 @@
     font-family: 'Saira', sans-serif;
     color: #FFFFFF;
 }
+

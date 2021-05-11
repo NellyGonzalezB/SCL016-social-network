@@ -1,7 +1,7 @@
 export default () => {
-    const selectionPage = document.createElement("div");
-    selectionPage.setAttribute("class", "fourth-page");
-    selectionPage.innerHTML = `
+  const selectionPage = document.createElement('div')
+  selectionPage.setAttribute('class', 'fourth-page')
+  selectionPage.innerHTML = `
     <div class="second-logo-container">
         <img src="https://i.ibb.co/47JxNMV/animeki-second-logo.png" alt="">
     </div>
@@ -31,5 +31,5 @@ export default () => {
 
     </div>
     `
-    return selectionPage;
+  return selectionPage
 }

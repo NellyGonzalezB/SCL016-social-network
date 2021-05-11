@@ -1,6 +1,6 @@
 export default () => {
-  const container = document.createElement('div');
-  container.setAttribute('class', 'second-page');
+  const container = document.createElement('div')
+  container.setAttribute('class', 'second-page')
 
   container.innerHTML = `
     <div class="second-logo-container">
@@ -27,7 +27,7 @@ export default () => {
     <p class="forget-user">¿Olvidaste tu nombre de usuario o contraseña?</p>
     <p class="registration-link">Si no has creado tu cuenta, registrate <a href="#/signup" id="link">AQUÍ</a></p>
   </div>
-    `;
+    `
 
-  return container;
-};
+  return container
+}

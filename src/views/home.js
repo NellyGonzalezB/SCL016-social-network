@@ -1,6 +1,6 @@
 export default () => {
-  const homePage = document.createElement('div');
-  homePage.setAttribute('class', 'first-page');
+  const homePage = document.createElement('div')
+  homePage.setAttribute('class', 'first-page')
   homePage.innerHTML = `
         <div class="logo-container">
             <img src="https://i.ibb.co/7CJwt0q/animeki-logo.png" alt="">
@@ -11,6 +11,6 @@ export default () => {
                 buen rato!</h2>
             <button class="start-btn" id="start-btn">CONTINUAR</button>
         </div>
-    `;
-  return homePage;
-};
+    `
+  return homePage
+}

@@ -1,6 +1,6 @@
 export default () => {
-  const wall = document.createElement('div');
-  wall.setAttribute('class', 'wall-page');
+  const wall = document.createElement('div')
+  wall.setAttribute('class', 'wall-page')
   wall.innerHTML = `
     <nav class="navbar navbar-expand-lg navbar-light" style="background-color:#5F5F5F;">
     <div class="container-fluid">
@@ -51,5 +51,5 @@ export default () => {
 
   
     `
-  return wall;
-};
+  return wall
+}

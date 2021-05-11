@@ -1,7 +1,7 @@
 export default () => {
-    const signup = document.createElement("div");
-    signup.setAttribute("class", "third-page");
-    signup.innerHTML = `
+  const signup = document.createElement('div')
+  signup.setAttribute('class', 'third-page')
+  signup.innerHTML = `
     <div class="second-logo-container">
     <img src="https://i.ibb.co/47JxNMV/animeki-second-logo.png" alt="">
     </div>
@@ -16,5 +16,5 @@ export default () => {
         </form>
     </div>
     `
-    return signup;
+  return signup
 }
