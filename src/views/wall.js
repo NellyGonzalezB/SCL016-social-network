@@ -3,26 +3,16 @@ export default () => {
   wall.setAttribute('class', 'wall-page')
   wall.innerHTML = `
     <nav class="navbar navbar-expand-lg navbar-light" style="background-color:#5F5F5F;">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#">Home</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Profile</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Logout</a>
-          </li>
-        </ul>
-            <form class="d-flex">
-                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success" type="submit" style="background-color: #09D1E1; color: white;" >Search</button>
-             </form>
-            </div>
+      <div class="container-fluid">
+        <img src="https://i.ibb.co/4JVQQqy/logito.png">
+        <div class="" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li onclick="document.location.reload();" class="nav-item">
+              <a class="nav-link" href="#" id="logout" style= "color : #FFFFFF;" >Logout</a>
+            </li>
+          </ul>
         </div>
+      </div>
     </nav>
 
    <div class="container p-4">

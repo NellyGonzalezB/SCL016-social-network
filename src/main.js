@@ -4,9 +4,10 @@
 // import { myFunction } from './lib/index.js';
 
 // myFunction();
-
+import { auth } from './firebase.js'
 import { routes } from './routes.js'
-import postForm from './lib/index.js'
+import index from './lib/index.js'
+
 
 const url = () => {
   // const url = window.location.hash;
@@ -39,7 +40,6 @@ const signupPage = () => {
       const email = document.getElementById('write-e-mail').value
       const password = document.getElementById('write-password').value
 
-      // eslint-disable-next-line no-undef
       auth
         .createUserWithEmailAndPassword(email, password)
         .then(() => {
@@ -66,7 +66,7 @@ const loginPage = () => {
       const yourPassword = document.getElementById('your-password').value
       console.log(yourEmail, yourPassword)
 
-      // eslint-disable-next-line no-undef
+  
       auth
         .signInWithEmailAndPassword(yourEmail, yourPassword)
         .then(() => {
@@ -84,14 +84,10 @@ const loginPage = () => {
 
     const googleButton = document.querySelector('#googleLogin')
     googleButton.addEventListener('click', () => {
-      // eslint-disable-next-line no-undef
       const provider = new firebase.auth.GoogleAuthProvider()
-      // eslint-disable-next-line no-undef
       auth.signInWithPopup(provider)
         .then(() => {
           console.log('google sign in')
-          // eslint-disable-next-line no-undef
-          signupForm.reset()
         })
         .catch((err) => {
           console.log(err)
@@ -102,14 +98,10 @@ const loginPage = () => {
 
     const facebookButton = document.querySelector('#facebookLogin')
     facebookButton.addEventListener('click', () => {
-      // eslint-disable-next-line no-undef
       const provider = new firebase.auth.FacebookAuthProvider()
-      // eslint-disable-next-line no-undef
       auth.signInWithPopup(provider)
         .then(() => {
           console.log('facebook sign in')
-          // eslint-disable-next-line no-undef
-          signupForm.reset()
         })
         .catch((err) => {
           console.log(err)
@@ -130,11 +122,5 @@ const wall = async () => {
   console.log('entro wall')
   history.pushState(null, 'wall', '#/wall')
   url()
-  postForm()
-  // const db = firebase.firestore();
-  // const getPosts = () => db.collection("posts").get();
-  // const querySnapshot = await getPosts();
-  // querySnapshot.forEach(doc => {
-  // return console.log(doc.data());
-  // })
+  index()
 }
