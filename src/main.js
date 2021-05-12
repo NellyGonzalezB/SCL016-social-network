@@ -8,7 +8,6 @@ import { auth } from './firebase.js'
 import { routes } from './routes.js'
 import index from './lib/index.js'
 
-
 const url = () => {
   // const url = window.location.hash;
   routes(window.location.hash)
@@ -65,8 +64,6 @@ const loginPage = () => {
       const yourEmail = document.getElementById('your-email').value
       const yourPassword = document.getElementById('your-password').value
       console.log(yourEmail, yourPassword)
-
-  
       auth
         .signInWithEmailAndPassword(yourEmail, yourPassword)
         .then(() => {
