@@ -17,10 +17,10 @@ export default () => {
                 <button type="submit" class="log-in-btn">INICIAR SESIÓN</button>
                 <br>
                 <button type="button" class="facebook-btn" id="facebookLogin">
-                <img class="facebook-logo" src="https://i.ibb.co/4FW3WXz/Facebook-icon-2013-1.png" alt="">
-                </button><br>
+                <p class="with-facebook"><img class="facebook-logo" src="https://i.ibb.co/4FW3WXz/Facebook-icon-2013-1.png" alt="">Iniciar sesión con Facebook</p>
+                </button>
                 <button type="button" class="google-btn" id="googleLogin">
-                <img class="google-logo" src="https://i.ibb.co/XZcxN1F/google.png" alt="">
+                <p class="with-google"><img class="google-logo" src="https://i.ibb.co/XZcxN1F/google.png" alt="">Iniciar sesión con Google</p>
                 </button>
             </form>
         </div>  

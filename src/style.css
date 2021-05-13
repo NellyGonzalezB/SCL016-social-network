@@ -1,20 +1,35 @@
-/*@media screen and (min-width:375px) and (max-width:667px){*/
+@media screen and (max-width:1200px){
 
+.first-page{
+    background-image: url(https://i.ibb.co/GJGxy2r/new-background.png);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 1000px;
+    width: 100%;
+    margin: 0 auto;
+    }    
+body {
+    width: 100%;
+    width: 100%;
+}    
 
 .logo-container {
     text-align: center;
 }
 
-.first-page {
-    background-image: url(https://i.ibb.co/k6RPzK0/background.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-}
-
 .macro-container {
-    width: 60%;
+    width: 80%;
     background-color: #FFFFFF;
+    width: 70%;
+    height: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 15px;
+    text-align: center;
+    margin-top: 30px;
+
 }
 
 .welcome-animeki {
@@ -32,11 +47,19 @@
     font-family: 'Saira', sans-serif;
     color: #FFFFFF;
     border-radius: 10px;
+    width: 171px;
+    height: 36px;
 }
 
-.second-page {
+.start-btn:hover {
+    transform:scale(1.2);   
+}
+
+.second-page, .third-page {
     /*display: none;*/
     background: linear-gradient(to bottom, #6A6C8A, #262736);
+    height: 1000px;
+    width: 100%;
 }
 
 .second-logo-container {
@@ -46,25 +69,66 @@
 .facebook-btn, .google-btn {
     background-color: transparent;
     border-color: transparent;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    display:block;
+}
+
+.with-facebook, .with-google{
+    font-family: 'Saira', sans-serif;
+    color: #FFFFFF;  
 }
 
 .your-email, .your-password {
     border-radius: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    display:block;
 }
 
-.e-mail, .user-password {
+.e-mail, .user-password{
+    margin-top: 20px;
     color: #09D1E1;
-    font-family: Roboto;
+    font-family: Roboto,'Times New Roman', Times, serif;
+    text-align: center;
 }
 
-.registration-link, .remember, .personal-info {
+.remember {
+    margin-left: auto;
+    margin-right: auto;
+    display:block;
+    text-align: center;
     font-family: 'Roboto', sans-serif;
     color: #FFFFFF;
+    font-size: 15px;
+}
+
+.log-in-btn{
+    background: linear-gradient(to right, #09D1E1, #0939E1);
+    font-family: 'Saira', sans-serif;
+    color: #FFFFFF;
+    border-radius: 10px;
+    width: 171px;
+    height: 36px;
+    margin-left: auto;
+    margin-right: auto;
+    display:block;
+}
+.log-in-btn:hover{
+transform:scale(1.2);
+}
+
+.registration-link, .personal-info {
+    font-family: 'Roboto', sans-serif;
+    color: #FFFFFF;
+    text-align: center;
 }
 
 .forget-user {
     font-family: 'Roboto', sans-serif;
     color: #09D1E1;
+    text-align: center;
 
 }
 
@@ -75,17 +139,26 @@
 
 .registration-container {
     background: linear-gradient(to bottom, #419BD3, #013D74);
-    width: 60%;
+    width: 50%;
+    padding: 15px;
     border-radius: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    display:block;
 }
 
-.full-name, .date-birth, .e-mail-adress, .password {
+.e-mail-adress, .password {
     font-family: 'Roboto', sans-serif;
     color: #FFFFFF;
+    text-align: center;
 }
 
-.write-name, .write-date, .write-e-mail, .write-password, .repeat-password {
-    border-radius: 5px;;
+.write-e-mail, .write-password{
+    border-radius: 5px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    display:block;
 }
 
 .register-btn {
@@ -93,9 +166,42 @@
     font-family: 'Saira', sans-serif;
     color: #FFFFFF;
     border-radius: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    display:block;
 }
 
-.fourth-page {
+.calendary-container{
+    background: linear-gradient(to right, #09D1E1, #0939E1); 
+}
+
+.calendary-title{
+    color: white;
+    font-family: 'Saira', sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+h4{
+    color: white;
+    font-family: 'Saira', sans-serif;
+    font-size: 13px;  
+    display: flex;
+    justify-content: flex-end;  
+    padding: 6px;
+}
+
+.calendary-april{
+    float: left;
+    width: 150px;
+    height: auto;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.wall-page {
     /*display: none;*/
     background: linear-gradient(to bottom, #6A6C8A, #262736);
 }
@@ -105,3 +211,9 @@
     color: #FFFFFF;
 }
 
+.perfil-photo{
+    float: left;
+    width: 60px;
+}
+
+}

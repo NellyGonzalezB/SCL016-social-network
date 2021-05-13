@@ -11,7 +11,7 @@ export default () => {
         <h3 class="e-mail-adress">Correo electrónico</h3>
         <input type="text" class="write-e-mail" id="write-e-mail">
         <h3 class="password">Contraseña</h3>
-        <input type="password" class="write-password" id="write-password">
+        <input type="password" class="write-password" id="write-password"><br>
         <button type="submit" class="register-btn" id="register-btn">REGISTRARSE</button>
         </form>
     </div>

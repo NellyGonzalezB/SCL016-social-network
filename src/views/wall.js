@@ -14,10 +14,17 @@ export default () => {
         </div>
       </div>
     </nav>
-
+    <div class="calendary-container">
+      <img class="calendary-april" src="https://i.ibb.co/2tdJBDG/april.png">
+      <h2 class="calendary-title">CALENDARIO EVENTOS ABRIL</h2>
+      <h4 class="event-01">01 ABRIL Estreno Demon Slayer en Netflix</h4>
+      <h4 class="event-02">01 ABRIL Estreno Remake Shaman King</h4>
+      <h4 class="event-03">09 ABRIL Final del Manga Attack On Titan</h4>
+    </div>
    <div class="container p-4">
     <div class="row">
       <div class="col-md-4 offset-md-4">
+      <img class="perfil-photo" src="https://i.ibb.co/FqQp3Xx/perfil-photo.png">
         <div class="card">
           <div class="card-body">
             <form id="post-form">
@@ -25,7 +32,7 @@ export default () => {
                 <textarea id="post" rows="3" class="form-control" placeholder="Post here..."></textarea>
               </div>
                 <button class="btn btn-primary" id="btn save-form">
-                  Post it
+                  Post it 
                 </button>
             </form>
           </div>

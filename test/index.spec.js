@@ -1,8 +1,14 @@
-// importamos la funcion que vamos a testear
-// import { myFunction } from '../src/lib/index';
+import MockFirebase from 'mock-cloud-firestore'
+/* eslint-disable no-undef */
+// import MockFirebase from '../_mocks_/firebase-mock.js'
+// global.firebase = MockFirebase()
+// eslint-disable-next-line import/first
+import { savePost } from '../src/lib/index'
 
-// describe('myFunction', () => {
-//   it('debería ser una función', () => {
-//     expect(typeof myFunction).toBe('function');
-//   });
-// });
+describe('save', () => {
+  it('Deberia poder agregar un post', () => {
+    return savePost('hola', 2).then((data) => {
+      expect(data).toBe('hola', 2)
+    })
+  })
+})

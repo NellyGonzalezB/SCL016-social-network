@@ -1,7 +1,16 @@
+/* eslint-disable no-undef */
 
 import { db } from '../firebase.js'
 
-export default () => {
+export const savePost = (postIt, contador) => {
+  contador = 0
+  firebase.firestore().collection('posts').doc().set({
+    postIt,
+    contador
+  })
+}
+
+export const DoPost = () => {
   const postForm = document.getElementById('post-form')
   const postContainer = document.getElementById('post-container')
   const updatePost = (id, updatedPost) => db.collection('posts').doc(id).update(updatedPost)
@@ -10,14 +19,6 @@ export default () => {
   let id = ''
   let contador = 0
   const getPost = (id) => db.collection('posts').doc(id).get()
-
-  const savePost = (postIt, contador) => {
-    contador = 0
-    db.collection('posts').doc().set({
-      postIt,
-      contador
-    })
-  }
 
   postForm.addEventListener('submit', async (e) => {
     e.preventDefault()
@@ -46,7 +47,7 @@ export default () => {
 
       postContainer.innerHTML += `
                 <div class="my-posts card mt-5">
-
+                  
                     <div class="card-body mt-2 border-primary">
                          ${post.postIt}
                      </div>
@@ -58,9 +59,9 @@ export default () => {
                             Edit
                         </button>
                         <button class="btn btn-primary btn-like" id="${post.id}">
-                            Like
+                            Likes ${post.contador}
+                        
                         </button>
-                        <textarea  cols="1" rows="1"> ${post.contador}</textarea>
 
                     </div>
                 </div>

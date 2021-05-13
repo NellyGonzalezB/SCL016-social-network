@@ -1,12 +1,13 @@
+/* eslint-disable no-undef */
 /* eslint-disable no-restricted-globals */
 // Este es el punto de entrada de tu aplicacion
 
 // import { myFunction } from './lib/index.js';
 
 // myFunction();
-import { auth } from './firebase.js'
 import { routes } from './routes.js'
-import index from './lib/index.js'
+import { auth } from './firebase.js'
+import { DoPost } from './lib/index.js'
 
 const url = () => {
   // const url = window.location.hash;
@@ -119,5 +120,5 @@ const wall = async () => {
   console.log('entro wall')
   history.pushState(null, 'wall', '#/wall')
   url()
-  index()
+  DoPost()
 }
