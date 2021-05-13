@@ -5,9 +5,10 @@
 // import { myFunction } from './lib/index.js';
 
 // myFunction();
+
 import { routes } from './routes.js'
+import { DoPost } from '../lib/wallView.js'
 import { auth } from './firebase.js'
-import { DoPost } from './lib/index.js'
 
 const url = () => {
   // const url = window.location.hash;
@@ -58,7 +59,8 @@ const loginPage = () => {
     console.log('click')
     url()
     console.log('url')
-    // //Login
+
+    // Login
     const loginForm = document.querySelector('#login-form')
     loginForm.addEventListener('submit', (e) => {
       e.preventDefault()
