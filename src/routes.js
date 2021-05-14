@@ -6,14 +6,12 @@ import Wall from '../views/wall.js'
 
 const firstPage = document.getElementById('first-page')
 
-const routes = (route) => {
+export const routes = (route) => {
   firstPage.innerHTML = ''
-  console.log(route)
   switch (route) {
     case '#/home':
       return firstPage.appendChild(Home())
     case '#/login':
-      // return console.log(Login());
       return firstPage.appendChild(Login())
     case '#/signup':
       return firstPage.appendChild(Signup())
@@ -25,5 +23,3 @@ const routes = (route) => {
       return console.log('404!')
   }
 }
-
-export { routes }

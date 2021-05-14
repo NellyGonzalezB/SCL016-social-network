@@ -1,5 +1,5 @@
 /* eslint-disable no-undef */
-import { savePost } from '../lib/index.js'
+import { savePost, deletePosts } from '../lib/index.js'
 
 export const DoPost = () => {
   const postForm = document.getElementById('post-form')
@@ -28,7 +28,6 @@ export const DoPost = () => {
   })
 
   const onGetPosts = (callback) => firebase.firestore().collection('posts').onSnapshot(callback)
-  const deletePosts = (id) => firebase.firestore().collection('posts').doc(id).delete()
 
   onGetPosts((querySnapshot) => {
     postContainer.innerHTML = ''
@@ -58,6 +57,7 @@ export const DoPost = () => {
       const btnsDelete = document.querySelectorAll('.btn-delete')
       btnsDelete.forEach(btn => {
         btn.addEventListener('click', async (e) => {
+          console.log(deletePosts(e.target.id))
           await deletePosts(e.target.id)
         })
       })

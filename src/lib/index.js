@@ -8,3 +8,7 @@ export const savePost = (postIt, contador) => {
     contador
   })
 }
+
+export const deletePosts = (id) => {
+  return firebase.firestore().collection('posts').doc(id).delete()
+}
