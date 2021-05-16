@@ -135,7 +135,7 @@
     
     .registration-container {
         background: linear-gradient(to bottom, #419BD3, #013D74);
-        width: 50%;
+        /*width: 50%;*/
         padding: 15px;
         border-radius: 10px;
         margin-left: auto;
