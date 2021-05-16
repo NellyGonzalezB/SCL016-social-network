@@ -1,10 +1,21 @@
+/* Crea la página para seleccionar gustos en anime */
+
 export default () => {
   const selectionPage = document.createElement('div')
   selectionPage.setAttribute('class', 'fourth-page')
   selectionPage.innerHTML = `
-    <div class="second-logo-container">
-        <img src="https://i.ibb.co/47JxNMV/animeki-second-logo.png" alt="">
+<nav class="navbar navbar-expand-lg navbar-light" style="background-color:#5F5F5F;">
+  <div class="container-fluid">
+    <img src="https://i.ibb.co/4JVQQqy/logito.png">
+    <div class="" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li onclick="document.location.reload();" class="nav-item">
+          <a class="nav-link" href="#" id="logout" style= "color : #FFFFFF;" >Continue</a>
+        </li>
+      </ul>
     </div>
+  </div>
+</nav>
     <h1 class="fourth-title">Seleciona tus</h1>
     <h2 class="fourth-title">ANIMES y MANGAS favoritos<br>(máximo 8)</h2>
     <div class="anime-container">

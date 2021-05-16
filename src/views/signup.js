@@ -1,3 +1,5 @@
+/* Crea vista de Registro */
+
 export default () => {
   const signup = document.createElement('div')
   signup.setAttribute('class', 'third-page')

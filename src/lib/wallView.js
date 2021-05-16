@@ -1,14 +1,17 @@
 /* eslint-disable no-undef */
 import { savePost, deletePosts } from '../lib/index.js'
 
+/* Exporta función a main y crea, edita y borra publicaciones */
 export const DoPost = () => {
   const postForm = document.getElementById('post-form')
   const postContainer = document.getElementById('post-container')
   const updatePost = (id, updatedPost) => firebase.firestore().collection('posts').doc(id).update(updatedPost)
 
+  /* Variable para identificar si se está haciendo un nuevo post o editando */
   let editStatus = false
   let id = ''
-  let contador = 0
+  let contador = 0 /* Cuenta los likes */
+  /* Trae los post con su id correspondiente */
   const getPost = (id) => firebase.firestore().collection('posts').doc(id).get()
 
   postForm.addEventListener('submit', async (e) => {
@@ -22,11 +25,12 @@ export const DoPost = () => {
         contador
       })
       editStatus = false
-      postForm['btn save-form'].innerText = 'Save'
+      postForm['btn save-form'].innerText = 'Save' /* cambia estado del boton de update a save  */
     }
     postForm.reset()
   })
 
+  /* Cada vez que cambian los contenidos, otra llamada actualiza el documento instantáneamente */
   const onGetPosts = (callback) => firebase.firestore().collection('posts').onSnapshot(callback)
 
   onGetPosts((querySnapshot) => {
@@ -37,7 +41,6 @@ export const DoPost = () => {
 
       postContainer.innerHTML += `
                 <div class="my-posts card mt-5">
-
                     <div class="card-body mt-2 border-primary">
                          ${post.postIt}
                      </div>
@@ -54,13 +57,16 @@ export const DoPost = () => {
                     </div>
                 </div>
                 `
+
+      /* Borrar un post con su id correspondiente */
       const btnsDelete = document.querySelectorAll('.btn-delete')
       btnsDelete.forEach(btn => {
         btn.addEventListener('click', async (e) => {
-          console.log(deletePosts(e.target.id))
           await deletePosts(e.target.id)
         })
       })
+
+      /* Editar un post con su id */
       const btnsEdit = document.querySelectorAll('.btn-edit')
 
       btnsEdit.forEach(btn => {
@@ -76,6 +82,7 @@ export const DoPost = () => {
         })
       })
 
+      /* Reaccionar a una publicación */
       const btnsLike = document.querySelectorAll('.btn-like')
 
       btnsLike.forEach(btn => {
@@ -83,11 +90,7 @@ export const DoPost = () => {
           const doc = await getPost(e.target.id)
           const post = doc.data()
           contador = post.contador + 1
-          // contadorF.value =
 
-          console.log(post.contador)
-          console.log(post)
-          console.log(contador)
           id = doc.id
           updatePost(id, {
             contador

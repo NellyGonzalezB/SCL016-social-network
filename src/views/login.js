@@ -1,3 +1,5 @@
+/* Crea vista de página de login */
+
 export default () => {
   const container = document.createElement('div')
   container.setAttribute('class', 'second-page')

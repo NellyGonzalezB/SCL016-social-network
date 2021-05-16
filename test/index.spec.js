@@ -1,8 +1,10 @@
-import MockFirebase from 'mock-cloud-firestore'
 /* eslint-disable no-undef */
 // import MockFirebase from '../_mocks_/firebase-mock.js'
 // global.firebase = MockFirebase()
 
+import MockFirebase from 'mock-cloud-firestore'
+
+/* Data falsa para testeo */
 const fixtureData = {
   __collection__: {
     pots: {
@@ -18,7 +20,9 @@ const fixtureData = {
   }
 }
 
+/* Todas las variables "firebase" se cambiarán por lo que se usa en la librería Mock */
 global.firebase = new MockFirebase(fixtureData, { isNaiveSnapshotListenerEnabled: true })
+/* isnaivesnapshotlistenerenabled para escuchar las actualizaciones de snapshot en tiempo real */
 
 // eslint-disable-next-line import/first
 import { savePost, deletePosts } from '../src/lib/index.js'

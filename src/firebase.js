@@ -1,7 +1,6 @@
 /* eslint-disable no-undef */
-// Your web app's Firebase configuration
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
 
+/* Configuración e inicialización de servicios de Firebase */
 const firebaseConfig = {
   apiKey: 'AIzaSyDjR4142j6cUVsRyDqwCtuxD62c5E8tmFc',
   authDomain: 'red-social-e15d9.firebaseapp.com',

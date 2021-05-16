@@ -1,31 +1,41 @@
 /* eslint-disable no-undef */
 /* eslint-disable no-restricted-globals */
-// Este es el punto de entrada de tu aplicacion
 
-// import { myFunction } from './lib/index.js';
-
-// myFunction();
+/* Página principal con login, signup, google, facebook */
 
 import { routes } from './routes.js'
 import { DoPost } from '../lib/wallView.js'
 import { auth } from './firebase.js'
 
+/* Función que toma los cambios de hash */
 const url = () => {
-  // const url = window.location.hash;
   routes(window.location.hash)
 }
 
+/* Crea url de página de inicio con history api */
 const firstPage = () => {
   history.pushState(null, 'home', '#/home')
 
   url()
 }
+
+/* Crea url de página de selección */
 const selectionPage = () => {
   console.log('entro selection')
 
   history.pushState(null, 'selection', '#/selection')
   url()
 }
+
+/* Se crea ruta a la página de muro */
+const wall = async () => {
+  console.log('entro wall')
+  history.pushState(null, 'wall', '#/wall')
+  url()
+  DoPost()
+}
+
+/* Al hacer click en link ("Aquí"), se crea ruta a página de registro */
 const signupPage = () => {
   const link = document.getElementById('link')
 
@@ -48,10 +58,15 @@ const signupPage = () => {
           console.log('sign up')
           selectionPage()
         })
+        .catch(() => {
+          signupForm.reset()
+          console.log('e-mail o contraseña erroneos')
+        })
     })
   })
 }
 
+/* Al clickear botón continuar nos envía a la página de inicio de sesión */
 const loginPage = () => {
   const toContinue = document.getElementById('start-btn')
   toContinue.addEventListener('click', () => {
@@ -114,13 +129,6 @@ const loginPage = () => {
 firstPage()
 loginPage()
 
-window.addEventListener('popstate', () => {
-  url()
-})
-
-const wall = async () => {
-  console.log('entro wall')
-  history.pushState(null, 'wall', '#/wall')
-  url()
-  DoPost()
-}
+// window.addEventListener('popstate', () => {
+//   url()
+// })

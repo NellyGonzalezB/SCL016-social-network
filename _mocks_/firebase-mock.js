@@ -1,4 +1,7 @@
 /* eslint-disable no-undef */
+
+/* Mock manual para primer test */
+
 const firestore = () => {
   return {
     collection: (nameCollection) => {

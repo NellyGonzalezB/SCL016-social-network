@@ -1,3 +1,5 @@
+/* Crea vista de página de bienvenida */
+
 export default () => {
   const homePage = document.createElement('div')
   homePage.setAttribute('class', 'first-page')

@@ -1,6 +1,6 @@
 /* eslint-disable no-undef */
 
-// import { db } from '../firebase.js'
+/* Guardar y eliminar posts en firebase */
 export const savePost = (postIt, contador) => {
   contador = 0
   return firebase.firestore().collection('posts').add({

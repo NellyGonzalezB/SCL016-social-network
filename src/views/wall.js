@@ -1,3 +1,5 @@
+/* Crea página de muro de posts */
+
 export default () => {
   const wall = document.createElement('div')
   wall.setAttribute('class', 'wall-page')
